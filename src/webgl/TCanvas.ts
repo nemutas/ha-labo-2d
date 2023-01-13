@@ -9,7 +9,8 @@ import { mouse2d } from './utils/Mouse2D'
 
 export class TCanvas {
   private assets: Assets = {
-    image: { path: resolvePath('resources/image.jpg') },
+    image: { path: resolvePath('resources/image1.jpg') },
+    // image: { path: resolvePath('resources/image2.jpg') },
   }
 
   constructor(private parentNode: ParentNode) {
