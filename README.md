@@ -1,17 +1,7 @@
-# ha-labo-2d
+# About
 
-```
-gh repo clone nemutas/ha-labo-2d
-```
+[こちら](https://github.com/nemutas/ha-labo-effect)の2D版。ひとつのFragmentShaderで完結してるやつです。
 
-```
-npm install
-```
+https://nemutas.github.io/ha-labo-2d/
 
-# using
-
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Sass](https://sass-lang.com/)
-- [vite-plugin-glsl](https://github.com/UstymUkhman/vite-plugin-glsl)
-- [WebGL GLSL Editor](https://marketplace.visualstudio.com/items?itemName=raczzalan.webgl-glsl-editor) (v1.3.0 -> If the extension is set to glsl, errors originating from threejs built-in variables will not occur.)
+<img src='https://user-images.githubusercontent.com/46724121/212308492-47c45023-4a9a-4afa-90ef-7c63f868fd84.png' width='600' />
