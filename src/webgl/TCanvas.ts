@@ -39,7 +39,7 @@ export class TCanvas {
         u_mouse: { value: new THREE.Vector2() },
         u_time: { value: 0 },
         u_refractPower: { value: 0.8 },
-        u_unefractRange: { value: 0.1 },
+        u_unrefractRange: { value: 0.1 },
       },
       vertexShader,
       fragmentShader,
@@ -52,7 +52,7 @@ export class TCanvas {
     // add gui
     const gui = new GUI()
     gui.add(material.uniforms.u_refractPower, 'value', 0, 1, 0.01).name('refract power')
-    gui.add(material.uniforms.u_unefractRange, 'value', 0, 0.2, 0.01).name('unrefract range')
+    gui.add(material.uniforms.u_unrefractRange, 'value', 0, 0.2, 0.01).name('unrefract range')
   }
 
   private getUniforms() {

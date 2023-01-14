@@ -8,7 +8,7 @@ uniform TextureData u_image;
 uniform vec2 u_resolution;
 uniform vec2 u_mouse;
 uniform float u_refractPower;
-uniform float u_unefractRange;
+uniform float u_unrefractRange;
 varying vec2 v_uv;
 
 const float radius = 0.3;
@@ -37,7 +37,7 @@ void main() {
   // uvからマウスへの方向を求める。大きさは、曲げる量になる。
   vec2 refractPower = (v_uv - mouse) * u_refractPower;
   // 球体内で屈折する範囲を求める（0.1までは曲げない）
-  float range = map(dist, u_unefractRange, radius, 0.0, 1.0);
+  float range = map(dist, u_unrefractRange, radius, 0.0, 1.0);
   // 球体の端にいくほど、強く曲がるようにする。
   range = pow(range, 3.0);
   // 曲げる量をもとめる。屈折の強さ（+方向） * 範囲
