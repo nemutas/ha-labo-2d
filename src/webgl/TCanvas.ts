@@ -1,3 +1,4 @@
+import GUI from 'lil-gui'
 import * as THREE from 'three'
 import { resolvePath } from '../scripts/utils'
 import { gl } from './core/WebGL'
@@ -37,6 +38,8 @@ export class TCanvas {
         u_resolution: { value: new THREE.Vector2(gl.size.width, gl.size.height) },
         u_mouse: { value: new THREE.Vector2() },
         u_time: { value: 0 },
+        u_refractPower: { value: 0.8 },
+        u_unefractRange: { value: 0.1 },
       },
       vertexShader,
       fragmentShader,
@@ -45,6 +48,11 @@ export class TCanvas {
     mesh.name = 'screen'
 
     gl.scene.add(mesh)
+
+    // add gui
+    const gui = new GUI()
+    gui.add(material.uniforms.u_refractPower, 'value', 0, 1, 0.01).name('refract power')
+    gui.add(material.uniforms.u_unefractRange, 'value', 0, 0.2, 0.01).name('unrefract range')
   }
 
   private getUniforms() {
